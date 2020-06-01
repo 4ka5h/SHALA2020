@@ -1,0 +1,152 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled3.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyOmp8HtC7P/2N4cFlr4Zch2",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/aksgpt30/SHALA2020/blob/master/gettingStarted\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "TI71tNHduUwZ",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "import numpy as np\n",
+        "import pandas as pd "
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "diZqYqyg4PME",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 89
+        },
+        "outputId": "80d72297-072b-42dd-8a5a-cc36cf37cf26"
+      },
+      "source": [
+        "df = pd.DataFrame({\n",
+        "    \"Name\" : [\"Aa\",\"Bb\",\"Cc\"],\n",
+        "    \"Age\" :[28,30,25],\n",
+        "    \"Sex\" : [\"female\",\"female\",\"male\"]\n",
+        "})\n",
+        "\n",
+        "df[\"Sex\"]"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "0    female\n",
+              "1    female\n",
+              "2      male\n",
+              "Name: Sex, dtype: object"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "AFOd5Md1gXPI",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "df.describe()\n"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "JcNC4zjegpEv",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "68384a72-501c-41b6-d40b-7c8d56582062"
+      },
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/gdrive')\n",
+        "%cd '/gdrive/My Drive/SHALA'\n",
+        "%ls"
+      ],
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Drive already mounted at /gdrive; to attempt to forcibly remount, call drive.mount(\"/gdrive\", force_remount=True).\n",
+            "/gdrive/My Drive/SHALA\n",
+            "foo.txt\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "VpAVQhBugpDL",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "2e137cd1-3cff-4591-8569-32f2bc3cebdc"
+      },
+      "source": [
+        "with open('/gdrive/My Drive/SHALA/foo.txt', 'w') as f:\n",
+        "  f.write('Hello Google Drive!')\n",
+        "!cat '/gdrive/My Drive/SHALA/foo.txt'"
+      ],
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Hello Google Drive!"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
